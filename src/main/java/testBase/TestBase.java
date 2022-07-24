@@ -21,7 +21,6 @@ public class TestBase {
 		
 		try { prop = new Properties();
 		FileInputStream	f = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\ama\\qa\\config\\config.properties");
-		//System.out.println();
 		prop.load(f);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -30,27 +29,7 @@ public class TestBase {
 		}
 	}
 		public static void initialization() throws IOException, InterruptedException {
-			
-			/*String browser = prop.getProperty("browser");
-			if (browser.equals("chrome")) {
-				System.setProperty("webdriver.chrome.driver", "C:\\seleniumjarschrome\\chromedriver.exe");
-				driver = new ChromeDriver();
-			} else if (browser.equals("Firefox")) {
-				System.setProperty("webdriver.gecko.driver", "C:\\SeleniumJars\\geckodriver.exe");
-				driver = new FirefoxDriver();
-			} else {
-				System.setProperty("webdriver.edge.driver", "C:\\SeleniumJars\\msedgedriver.exe");
-				 driver = new EdgeDriver();
-			}
-			
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMOUT, TimeUnit.SECONDS);
-			driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-			
-			driver.get( prop.getProperty("url"));
-			Thread.sleep(5000);*/
-			 
+		
 						
 				String browser = prop.getProperty("browser");
 				if (browser.equals("chrome")) {
