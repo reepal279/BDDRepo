@@ -12,11 +12,12 @@ import testUtil.TestUtil;
 public class SigninStepDefination extends TestBase {
 	LoginPage loginPage;
 	TestBase testbase;
-	SigninPage signinPage;
+	SigninPage signinPage ;
 	TestUtil testUtil;
     
 	@Given("^enter emailadress\"([^\"]*)\"$")
-	public void enter_emailadress(String arg1) throws IOException{
+	public void enter_emailadress(String arg1) throws IOException, InterruptedException{
+		signinPage = new  SigninPage();
 		signinPage.login();
 	}
 

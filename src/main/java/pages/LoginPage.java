@@ -11,8 +11,7 @@ import testBase.TestBase;
 public class LoginPage extends TestBase {
 
  
-	public static String  getTitle() throws IOException, InterruptedException {
-		initialization();
+	public  String  getTitle() throws IOException, InterruptedException {
 		String actualTitle = driver.getTitle();
 	    System.out.println(actualTitle);
 		Assert.assertEquals(actualTitle,"Amazon.ca: Low Prices – Fast Shipping – Millions of Items");
@@ -21,7 +20,7 @@ public class LoginPage extends TestBase {
 	}
 	
 	
-	public static void headerLinks() {
+	public  void headerLinks() {
 	
 		WebElement Header = driver.findElement(By.xpath("//div[@id='nav-xshop']"));
 		List<WebElement> AllLinks = Header.findElements(By.tagName("a"));
@@ -32,8 +31,6 @@ public class LoginPage extends TestBase {
 		}
    
 	}
-	public void closeBrowser() {
-		driver.quit();
-	}
+	
 	
 }

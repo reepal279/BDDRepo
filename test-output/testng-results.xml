@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-24T00:18:54Z" name="Default suite" finished-at="2022-07-24T00:20:29Z" duration-ms="94754">
+  <suite started-at="2022-07-24T20:34:34Z" name="Default suite" finished-at="2022-07-24T20:35:00Z" duration-ms="25635">
     <groups>
       <group name="cucumber">
         <method signature="Runner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:myRunner.Runner@152aa092]" name="feature" class="myRunner.Runner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-07-24T00:18:54Z" name="Default test" finished-at="2022-07-24T00:20:29Z" duration-ms="94754">
+    <test started-at="2022-07-24T20:34:34Z" name="Default test" finished-at="2022-07-24T20:35:00Z" duration-ms="25635">
       <class name="myRunner.Runner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:myRunner.Runner@152aa092]" started-at="2022-07-24T00:18:54Z" name="setUpClass" finished-at="2022-07-24T00:18:54Z" duration-ms="334" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:myRunner.Runner@152aa092]" started-at="2022-07-24T20:34:34Z" name="setUpClass" finished-at="2022-07-24T20:34:35Z" duration-ms="294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:myRunner.Runner@152aa092]" started-at="2022-07-24T00:18:54Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-07-24T00:20:29Z" duration-ms="94264" status="FAIL">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:myRunner.Runner@152aa092]" started-at="2022-07-24T20:34:35Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-07-24T20:35:00Z" duration-ms="25204" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -24,10 +24,22 @@
           </params>
           <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "pages.SigninPage.login()" because "this.signinPage" is null]]>
+              <![CDATA[org.openqa.selenium.WebDriverException: TypeError: browsingContext.currentWindowGlobal is null
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'RS', ip: '192.168.2.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220705093820, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 37300, moz:profile: C:\Users\reepa\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bbdc4122-b73c-443d-b2f9-236cf6cd7d52
+*** Element info: {Using=xpath, value=//div[@id='nav-xshop']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: java.lang.NullPointerException: Cannot invoke "pages.SigninPage.login()" because "this.signinPage" is null
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.WebDriverException: TypeError: browsingContext.currentWindowGlobal is null
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'RS', ip: '192.168.2.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220705093820, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 37300, moz:profile: C:\Users\reepa\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bbdc4122-b73c-443d-b2f9-236cf6cd7d52
+*** Element info: {Using=xpath, value=//div[@id='nav-xshop']}
 at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 at myRunner.Runner.feature(Runner.java:31)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -55,16 +67,38 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException: Cannot invoke "pages.SigninPage.login()" because "this.signinPage" is null
-at StepDefination.SigninStepDefination.enter_emailadress(SigninStepDefination.java:20)
-at ✽.Given enter emailadress"saumypatel18374@gmail.com"(C:/Selenium_workSpace/amazon/src/main/java/feature/login.feature:12)
+Caused by: org.openqa.selenium.WebDriverException: TypeError: browsingContext.currentWindowGlobal is null
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'RS', ip: '192.168.2.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220705093820, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 37300, moz:profile: C:\Users\reepa\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bbdc4122-b73c-443d-b2f9-236cf6cd7d52
+*** Element info: {Using=xpath, value=//div[@id='nav-xshop']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pages.LoginPage.headerLinks(LoginPage.java:25)
+at StepDefination.LoginStepDefination.get_a_all_page_top_links(LoginStepDefination.java:41)
+at ✽.Then get a all page top links(C:/Selenium_workSpace/amazon/src/main/java/feature/login.feature:11)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:myRunner.Runner@152aa092]" started-at="2022-07-24T00:20:29Z" name="tearDownClass" finished-at="2022-07-24T00:20:29Z" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:myRunner.Runner@152aa092]" started-at="2022-07-24T20:35:00Z" name="tearDownClass" finished-at="2022-07-24T20:35:00Z" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

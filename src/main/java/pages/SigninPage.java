@@ -7,12 +7,12 @@ import testBase.TestBase;
 public class SigninPage extends TestBase {
 	
 
-	public void login() {
+	public  void login() throws InterruptedException {
 		/*Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(By.xpath("//span[contains(text(),'Account & Lists')]"))).build().perform();
 		driver.findElement(By.xpath("//div[@id='nav-flyout-ya-signin']//a[@class='nav-action-button']//span[@class='nav-action-inner'][contains(text(),'Sign in')]")).click();
 		driver.findElement(By.id("ap_email")).sendKeys("email");*/
-		driver.findElement(By.id("nav-link-accountList-nav-line-1")).click();
+		driver.findElement(By.xpath("//a[contains(.,'Hello, Sign in')]")).click();
 		driver.findElement(By.id("ap_email")).sendKeys("saumypatel18374@gmail.com");
 		
 	}

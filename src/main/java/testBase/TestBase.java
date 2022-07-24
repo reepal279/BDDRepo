@@ -20,7 +20,8 @@ public class TestBase {
 	public TestBase(){
 		
 		try { prop = new Properties();
-		FileInputStream	f = new FileInputStream("C:\\Selenium_workSpace\\amazon\\src\\main\\java\\com\\ama\\qa\\config\\config.properties");
+		FileInputStream	f = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\ama\\qa\\config\\config.properties");
+		//System.out.println();
 		prop.load(f);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

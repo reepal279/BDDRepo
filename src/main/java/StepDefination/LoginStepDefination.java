@@ -1,4 +1,4 @@
-package StepDefination;
+	package StepDefination;
 
 import java.io.IOException;
 
@@ -22,31 +22,28 @@ public class LoginStepDefination extends TestBase {
 	TestUtil testUtil;
 	
 	
-	@Before
-	public void init() throws IOException, InterruptedException {
-		initialization();
-	}
 
 	@Given("^open amazon links$")
-	public void open_amazon_links() throws IOException{
-	
+	public void open_amazon_links() throws IOException, InterruptedException{
+		initialization();
+
 	}
 
 	@When("^get a title of page$")
 	public void get_a_title_of_page() throws IOException, InterruptedException{
-		LoginPage.getTitle();
+		 loginPage = new LoginPage();
+		loginPage.getTitle();
 		
 	}
 
 	@Then("^get a all page top links$")
 	public void get_a_all_page_top_links() {
-		LoginPage.headerLinks();
+		loginPage.headerLinks();
 		
 	}
-
-	@After
-	public void quit() {
-		TestBase.closebrowser();
+	@Then("^close the browser\\.$")
+	public void close_the_browser() throws Throwable {
+	  closebrowser();
 	}
 	
 }
